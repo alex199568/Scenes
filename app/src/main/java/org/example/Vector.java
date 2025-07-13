@@ -75,4 +75,12 @@ public class Vector {
     public double dot(Vector other) {
         return x * other.x + y * other.y + z * other.z;
     }
+
+    public double squaredLength() {
+        return dot(this);
+    }
+
+    public double length() {
+        return Math.sqrt(squaredLength());
+    }
 }

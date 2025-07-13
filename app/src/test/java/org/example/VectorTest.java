@@ -61,4 +61,18 @@ public class VectorTest {
         var result = a.dot(b);
         Assertions.assertEquals(20.0, result);
     }
+
+    @Test
+    public void squaredLength() {
+        var v = new Vector(1, 2, 3);
+        var result = v.squaredLength();
+        Assertions.assertEquals(14.0, result);
+    }
+
+    @Test
+    public void length() {
+        var v = new Vector(1, 2, 3);
+        var result = v.length();
+        Assertions.assertEquals(3.7416573867739413, result);
+    }
 }
