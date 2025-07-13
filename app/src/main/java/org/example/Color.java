@@ -26,14 +26,54 @@ public class Color {
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Color color)) return false;
-        return Double.compare(r, color.r) == 0 &&
-                Double.compare(g, color.g) == 0 &&
-                Double.compare(b, color.b) == 0;
+        return Numbers.eq(r, color.r) &&
+                Numbers.eq(g, color.g) &&
+                Numbers.eq(b, color.b);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(r, g, b);
+    }
+
+    public Color add(Color other) {
+        return new Color(
+                r + other.r,
+                g + other.g,
+                b + other.b
+        );
+    }
+
+    public Color sub(Color other) {
+        return new Color(
+                r - other.r,
+                g - other.g,
+                b - other.b
+        );
+    }
+
+    public Color mul(Color other) {
+        return new Color(
+                r * other.r,
+                g * other.g,
+                b * other.b
+        );
+    }
+
+    public Color mul(double d) {
+        return new Color(
+                r * d,
+                g * d,
+                b * d
+        );
+    }
+
+    public Color div(double d) {
+        return new Color(
+                r / d,
+                g / d,
+                b / d
+        );
     }
 
     public static final Color WHITE = new Color(1, 1, 1);
