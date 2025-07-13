@@ -16,11 +16,11 @@ public class Vector {
 
     @Override
     public String toString() {
-        return "Vector{" +
-                "x=" + x +
-                ", y=" + y +
-                ", z=" + z +
-                '}';
+        return "Vector(" +
+                x +
+                ", " + y +
+                ", " + z +
+                ')';
     }
 
     @Override
@@ -82,5 +82,9 @@ public class Vector {
 
     public double length() {
         return Math.sqrt(squaredLength());
+    }
+
+    public Vector unit() {
+        return div(length());
     }
 }

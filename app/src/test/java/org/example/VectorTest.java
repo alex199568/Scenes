@@ -75,4 +75,12 @@ public class VectorTest {
         var result = v.length();
         Assertions.assertEquals(3.7416573867739413, result);
     }
+
+    @Test
+    public void unit() {
+        var v = new Vector(1, 2, 3);
+        var u = v.unit();
+        var expected = new Vector(0.2672612419124244, 0.5345224838248488, 0.8017837257372732);
+        Assertions.assertEquals(expected, u);
+    }
 }
