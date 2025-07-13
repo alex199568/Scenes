@@ -63,6 +63,15 @@ public class VectorTest {
     }
 
     @Test
+    public void cross() {
+        var a = new Vector(1, 2, 3);
+        var b = new Vector(2, 3, 4);
+        var result = a.cross(b);
+        var expected = new Vector(-1, 2, -1);
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
     public void squaredLength() {
         var v = new Vector(1, 2, 3);
         var result = v.squaredLength();
