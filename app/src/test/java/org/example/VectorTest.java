@@ -22,4 +22,12 @@ public class VectorTest {
         var result = a.sub(b);
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void mul() {
+        var v = new Vector(2, 3, 4);
+        var result = v.mul(2);
+        var expected = new Vector(4, 6, 8);
+        Assertions.assertEquals(expected, result);
+    }
 }

@@ -51,4 +51,12 @@ public class Vector {
                 z - other.z
         );
     }
+
+    public Vector mul(double d) {
+        return new Vector(
+                x * d,
+                y * d,
+                z * d
+        );
+    }
 }
