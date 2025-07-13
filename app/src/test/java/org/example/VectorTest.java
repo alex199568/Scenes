@@ -13,4 +13,13 @@ public class VectorTest {
         var result = a.add(b);
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void sub() {
+        var a = new Vector(9, 8, 7);
+        var b = new Vector(3, 4, 5);
+        var expected = new Vector(6, 4, 2);
+        var result = a.sub(b);
+        Assertions.assertEquals(expected, result);
+    }
 }

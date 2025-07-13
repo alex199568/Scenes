@@ -43,4 +43,12 @@ public class Vector {
                 z + other.z
         );
     }
+
+    public Vector sub(Vector other) {
+        return new Vector(
+                x - other.x,
+                y - other.y,
+                z - other.z
+        );
+    }
 }
