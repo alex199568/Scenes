@@ -36,6 +36,10 @@ public class Vector {
         return Objects.hash(x, y, z);
     }
 
+    public Vector neg() {
+        return new Vector(-x, -y, -z);
+    }
+
     public Vector add(Vector other) {
         return new Vector(
                 x + other.x,

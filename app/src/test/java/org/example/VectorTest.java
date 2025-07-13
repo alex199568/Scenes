@@ -13,6 +13,14 @@ public class VectorTest {
     }
 
     @Test
+    public void neg() {
+        var v = new Vector(1, -2, 3);
+        var result = v.neg();
+        var expected = new Vector(-1, 2, -3);
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
     public void add() {
         var a = new Vector(1, 2, 3);
         var b = new Vector(2, 3, 4);
