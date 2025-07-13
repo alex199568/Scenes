@@ -53,4 +53,12 @@ public class VectorTest {
         var expected = new Vector(1, 1.5, 2);
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void dot() {
+        var a = new Vector(1, 2, 3);
+        var b = new Vector(2, 3, 4);
+        var result = a.dot(b);
+        Assertions.assertEquals(20.0, result);
+    }
 }

@@ -71,4 +71,8 @@ public class Vector {
                 z / d
         );
     }
+
+    public double dot(Vector other) {
+        return x * other.x + y * other.y + z * other.z;
+    }
 }
