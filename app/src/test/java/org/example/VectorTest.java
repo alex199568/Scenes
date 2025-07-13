@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 public class VectorTest {
 
     @Test
+    public void vector() {
+        var a = new Vector(1, 2, 3);
+        var expected = new Vector(1, 2, 3);
+        Assertions.assertEquals(expected, a);
+    }
+
+    @Test
     public void add() {
         var a = new Vector(1, 2, 3);
         var b = new Vector(2, 3, 4);
