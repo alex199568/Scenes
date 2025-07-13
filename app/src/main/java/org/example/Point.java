@@ -35,4 +35,16 @@ public class Point {
     public int hashCode() {
         return Objects.hash(x, y, z);
     }
+
+    public Point add(Vector vector) {
+        return new Point(x + vector.x, y + vector.y, z + vector.z);
+    }
+
+    public Point sub(Vector vector) {
+        return new Point(x - vector.x, y - vector.y, z - vector.z);
+    }
+
+    public Vector sub(Point point) {
+        return new Vector(x - point.x, y - point.y, z - point.z);
+    }
 }
