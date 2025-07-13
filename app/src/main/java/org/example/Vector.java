@@ -59,4 +59,12 @@ public class Vector {
                 z * d
         );
     }
+
+    public Vector div(double d) {
+        return new Vector(
+                x / d,
+                y / d,
+                z / d
+        );
+    }
 }

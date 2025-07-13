@@ -30,4 +30,12 @@ public class VectorTest {
         var expected = new Vector(4, 6, 8);
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void div() {
+        var v = new Vector(2, 3, 4);
+        var result = v.div(2);
+        var expected = new Vector(1, 1.5, 2);
+        Assertions.assertEquals(expected, result);
+    }
 }
