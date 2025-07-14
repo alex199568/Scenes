@@ -24,6 +24,16 @@ public class Matrix4Test {
     }
 
     @Test
+    public void throwsWithWrongAmountOfArgs() {
+        Assertions.assertThrows(Exception.class, () -> new Matrix4(
+                1, 2, 3, 4,
+                2, 3, 4, 5,
+                3, 4, 5, 6,
+                4, 5, 6
+        ));
+    }
+
+    @Test
     public void setAndGet() {
         var a = new Matrix4(
                 1, 2, 3, 4,
