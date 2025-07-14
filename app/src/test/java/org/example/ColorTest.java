@@ -22,6 +22,15 @@ public class ColorTest {
     }
 
     @Test
+    public void addAssign() {
+        var a = new Color(0.1, 0.2, 0.3);
+        var b = new Color(0.2, 0.3, 0.4);
+        var expected = new Color(0.3, 0.5, 0.7);
+        a.addAssign(b);
+        Assertions.assertEquals(expected, a);
+    }
+
+    @Test
     public void sub() {
         var a = new Color(0.9, 0.8, 0.7);
         var b = new Color(0.2, 0.3, 0.4);
