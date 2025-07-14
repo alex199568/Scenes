@@ -80,4 +80,8 @@ public class Vector extends Xyz {
     public Vector unit() {
         return div(length());
     }
+
+    public Vector copy() {
+        return new Vector(x, y, z);
+    }
 }
