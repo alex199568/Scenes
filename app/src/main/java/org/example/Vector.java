@@ -27,6 +27,12 @@ public class Vector extends Xyz {
         );
     }
 
+    public void addAssign(Vector other) {
+        x += other.x;
+        y += other.y;
+        z += other.z;
+    }
+
     public Vector sub(Vector other) {
         return new Vector(
                 x - other.x,

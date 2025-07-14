@@ -30,6 +30,15 @@ public class VectorTest {
     }
 
     @Test
+    public void addAssign() {
+        var a = new Vector(1, 2, 3);
+        var b = new Vector(2, 3, 4);
+        var expected = new Vector(3, 5, 7);
+        a.addAssign(b);
+        Assertions.assertEquals(expected, a);
+    }
+
+    @Test
     public void sub() {
         var a = new Vector(9, 8, 7);
         var b = new Vector(3, 4, 5);
